@@ -16,7 +16,6 @@
     <a href="index.html"><img src="images/simple_logo.png" alt="" id="logo"></a>
 <div class="nav-links" id="navLinks">
     <i class="fa fa-times" onclick="hideMenu()"></i>
-    
     <ul>
         <li><a href="#">HOME</a></li>
         <li><a href="#aboutMe">ABOUT</a></li>
@@ -29,15 +28,19 @@
 <i class="fa fa-bars" onclick="showMenu()"></i>
 </nav>
 
-<div class="text-box">
-    <img src="images/ella_main.jpeg" alt="Dr Ella Guest smiling">
+<div class="hero-content">
+    <div class="hero-text">
+    
     <h1>Dr Ella Guest</h1>
     <p>Championing Positive Body Image and Psychosocial Support</p>
     <a href="#contact" class="hero-button">Get in touch</a>
-
+</div>
+<div class="hero-image">
+    <img src="images/ella_main.jpeg" alt="Dr Ella Guest smiling">
+</div>
 </div>
     </section>
-    <section class="aboutMe" id="aboutMe">
+    <section class="section-area" id="aboutMe">
         <h1>About Me</h1>
         <p>I am Ella Guest, a <a href="https://vtctfoundation.org.uk/">VTCT Foundation</a> Senior Research Fellow at the Centre for Appearance Research. As a Chartered Psychologist with the British Psychological Society (BPS) and a Registered Health Psychologist with the Health and Care Professions Council (HCPC), I am dedicated to understanding and improving the psychosocial wellbeing of individuals with appearance-altering conditions. My research focuses on fostering positive adjustment and promoting positive body image.
 
@@ -59,7 +62,7 @@
     </section>
 
 
-    <section class="work" id="work">
+    <section class="section-area" id="work">
         <h1>My Work   </h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, recusandae asperiores sapiente dicta illum fugiat minima tenetur numquam quasi. Animi ratione earum architecto illum voluptatum. Aperiam doloremque excepturi error explicabo.</p>
         <div class="row">
@@ -75,7 +78,7 @@
                 <img src="images/mindfulness.jpg">
                 <div class="layer">
                     <h3>
-                        Workshops
+                        Consulting
                     </h3>
                 </div>
             </div>
@@ -90,7 +93,7 @@
         </div>
     </section>
 
-    <section class="publications" id="publications">
+    <section class="section-area" id="publications">
 <h1>Publications</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti exercitationem sed obcaecati. Veritatis itaque ipsum iste ipsa explicabo distinctio nobis amet, eius ad fugit perspiciatis repellendus velit eos vitae fuga.</P>
 <div class="publications-col">
@@ -113,7 +116,7 @@
     
 </div>
     </section>
-    <section class="resources" id="resources">
+    <section class="section-area" id="resources">
         <h1>Resources</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloribus excepturi id, eius nostrum a fuga molestias corrupti eveniet porro enim nobis animi aperiam? Ullam non exercitationem maxime quos eos!</p>
         <div class="row">
@@ -148,10 +151,15 @@
             
         </div>
     </section>
-<section class="contact" id="contact">
+<section class="section-area" id="contact">
     <h1>Get in Touch</h1>
     <div class="form">
-
+        <form id="contactForm" action="mailto:ella@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
     </div>
 </section>
 </body> 
