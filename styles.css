@@ -23,6 +23,11 @@
     position: relative;
     z-index: 1;
   }
+
+  .views-nav {
+  background-color: #4d869c;
+
+  }
   .section-area{
     width: 80%;
     margin: auto;
@@ -131,12 +136,30 @@
     cursor: pointer;
   }
   
+  
   .hero-button:hover {
     border: 1px solid #7ab2b2;
     background: #7ab2b2;
     transition: 1s;
   }
   
+  .publications-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #5a9393;
+    border: 1px solid #5a9393;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  .publications-button:hover {
+    border: 1px solid #7ab2b2;
+    background: #7ab2b2;
+    transition: 1s;
+  }
+
   nav .fa {
     display: none;
   }
@@ -234,16 +257,15 @@ h3{
 /* PUBLICATIONS */
 
 .publications-col{
-    flex-basis: 31%;
+    flex-basis: 25%;
     border-radius: 10px;
     margin-bottom: 5%;
+    position: relative;
     text-align: center;
+    border: 1px solid #5a9393;
 }
 
-.publications-col img{
-    width: 50%;
-    border-radius: 10px;
-}
+
 
 /* RESOURCES */
 
