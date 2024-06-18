@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6fabf73c0.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -31,57 +32,33 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+       
+      
+       
         <section class="section-area" id="resources">
             <h1>Publications</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloribus excepturi id, eius nostrum a
                 fuga molestias corrupti eveniet porro enim nobis animi aperiam? Ullam non exercitationem maxime quos
                 eos!</p>
-            <div class="row">
-                <div class="resources-col">
-                    <img src="../images/reflection.jpg" alt="">
-
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus dignissimos molestias
-                        necessitatibus facere magni, totam ad quos similique asperiores illo praesentium a illum eaque
-                        quibusdam, expedita modi recusandae. Tenetur, debitis.</p>
-                    <a href="www.bbc.co.uk" target="_blank">Find out more</a>
-                </div>
-
-                <div class="resources-col">
-                    <img src="../images/reflection.jpg" alt="">
-
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus dignissimos molestias
-                        necessitatibus facere magni, totam ad quos similique asperiores illo praesentium a illum eaque
-                        quibusdam, expedita modi recusandae. Tenetur, debitis.</p>
-                    <a href="https://www.bbc.co.uk" target="_blank">Find out more</a>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="resources-col">
-                    <img src="../images/laptop.jpg" alt="">
-
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus dignissimos molestias
-                        necessitatibus facere magni, totam ad quos similique asperiores illo praesentium a illum eaque
-                        quibusdam, expedita modi recusandae. Tenetur, debitis.</p>
-                    <a href="www.bbc.co.uk" target="_blank">Find out more</a>
-                </div>
-
-                <div class="resources-col">
-                    <img src="../images/dandelion_sunset.jpg" alt="">
-
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus dignissimos molestias
-                        necessitatibus facere magni, totam ad quos similique asperiores illo praesentium a illum eaque
-                        quibusdam, expedita modi recusandae. Tenetur, debitis.</p>
-                    <a href="www.bbc.co.uk" target="_blank">Find out more</a>
-                </div>
-
-            </div>
+                <input type="text" id="filter-input" placeholder="Enter keyword to filter">
+                <button id="filter-button" onclick="filterPublications()">Filter</button>
+            <table id="publications-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Title</th>
+                        <th onclick="sortTable(1)">Date</th>
+                        <th onclick="sortTable(2)">Authors</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Publications data will go here -->
+                </tbody>
+            </table>
         </section>
-
-
-
-
+    </section>
+    <script src="../publications.js"></script>
 </body>
-<script src="script.js"></script>
+
 
 </html>
