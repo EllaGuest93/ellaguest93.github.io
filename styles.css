@@ -303,7 +303,7 @@ h3{
   border-radius: 4px;
 }
 
-#filter-button {
+.publications-button {
   background: #7ab2b2;
   color: #fff;
   border: none;
@@ -315,7 +315,7 @@ h3{
 }
 
 
-#filter-button:hover {
+.publications-button:hover {
   background-color: #5a9393;
 }
 /* RESOURCES */

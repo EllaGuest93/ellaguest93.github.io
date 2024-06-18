@@ -37,11 +37,15 @@
        
         <section class="section-area" id="resources">
             <h1>Publications</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloribus excepturi id, eius nostrum a
-                fuga molestias corrupti eveniet porro enim nobis animi aperiam? Ullam non exercitationem maxime quos
-                eos!</p>
-                <input type="text" id="filter-input" placeholder="Enter keyword to filter">
-                <button id="filter-button" onclick="filterPublications()">Filter</button>
+            <p>Explore Dr. Ella Guest's extensive research through the publication table available on this site. 
+                You can filter the publications by keyword and organize the entries by title, date, or lead author by clicking on the corresponding button. 
+                This feature allows for easy navigation and access to the specific information you are looking for.
+            </p>
+                <input type="text"  id="filter-input" placeholder="Enter keyword to filter">
+                <button class="publications-button" id="filter-button" onclick="filterPublications()">Filter</button>
+                <button class="publications-button" id="sort-date">Sort by Date</button>
+                <button class="publications-button" id="sort-authors">Sort by Authors</button>
+                <button class="publications-button" id="sort-title">Sort by Title</button>
             <table id="publications-table">
                 <thead>
                     <tr>
@@ -52,7 +56,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Publications data will go here -->
+                    <!-- Publications data will go here on loading page -->
                 </tbody>
             </table>
         </section>

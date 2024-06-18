@@ -1,43 +1,3 @@
-function sortTable(columnIndex) {
-    const table = document.getElementById("publications-table");
-    let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    switching = true;
-    dir = "asc"; 
-
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[columnIndex];
-            y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
-
-            if (dir == "asc") {
-                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
-                }
-            } else if (dir == "desc") {
-                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
-                }
-            }
-        }
-
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount++;
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
-    }
-}
 document.addEventListener("DOMContentLoaded", function() {
     const publications = [
         {
@@ -167,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
             link: "#"
         }
     ];
-
+    
     const tableBody = document.querySelector("#publications-table tbody");
 
     function renderTable(publications) {
@@ -175,18 +135,22 @@ document.addEventListener("DOMContentLoaded", function() {
         publications.forEach(pub => {
             const row = document.createElement("tr");
 
+            // Title cell
             const titleCell = document.createElement("td");
             titleCell.textContent = pub.title;
             row.appendChild(titleCell);
 
+            // Date cell
             const dateCell = document.createElement("td");
             dateCell.textContent = pub.date;
             row.appendChild(dateCell);
 
+            // Authors cell
             const authorsCell = document.createElement("td");
             authorsCell.textContent = pub.authors;
             row.appendChild(authorsCell);
 
+            // Link cell
             const linkCell = document.createElement("td");
             const link = document.createElement("a");
             link.href = pub.link;
@@ -207,4 +171,33 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         renderTable(filteredPublications);
     };
+
+    function handleKeyPress(event) {
+        if (event.key === "Enter") {
+            window.filterPublications();
+        }
+    }
+     // Add event listener to input field for keypress event
+     document.getElementById("filter-input").addEventListener("keypress", handleKeyPress);
+
+    // Sorting functions
+    function sortByDate() {
+        publications.sort((a, b) => a.date.localeCompare(b.date));
+        renderTable(publications);
+    }
+
+    function sortByAuthors() {
+        publications.sort((a, b) => a.authors.localeCompare(b.authors));
+        renderTable(publications);
+    }
+
+    function sortByTitle() {
+        publications.sort((a, b) => a.title.localeCompare(b.title));
+        renderTable(publications);
+    }
+
+    // Event listeners for sorting
+    document.getElementById("sort-date").addEventListener("click", sortByDate);
+    document.getElementById("sort-authors").addEventListener("click", sortByAuthors);
+    document.getElementById("sort-title").addEventListener("click", sortByTitle);
 });
